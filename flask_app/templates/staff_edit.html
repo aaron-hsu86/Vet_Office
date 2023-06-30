@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not a real vet office</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<style>
+    #form-size {
+        width: 500px;
+    }
+    .right-side {
+        writing-mode: 500px;
+    }
+    #input-text {
+        width: 350px;
+    }
+    .error-msg {
+        background-color: pink;
+        border-style: solid;
+        color: brown;
+    }
+</style>
+<body class="bg-dark text-light">
+    <div id="top nav bar" class="d-flex justify-content-between p-5">
+        <div>
+            <h1>Edit Doctor info!</h1>
+        </div>
+        <div class="d-flex gap-5 align-items-start">
+            <div><a href="/staff_dashboard" class="btn btn-primary">Home</a></div>
+            <div><a href="/clients" class="btn btn-secondary">Client info</a></div>
+            <div><a href="/logout" class="btn btn-danger">Logout</a></div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between p-5">
+        <div class="p-3" id="form-size">
+            <h3 class="text-danger fw-bold p-3">Let us know if your information needs updating!</h3>
+            <form action="/staff_account/edit" method="post" class="d-flex flex-column gap-3">
+                <input type="hidden" name="id" value="{{session['doctor_id']}}">
+                <div class="d-flex justify-content-between">
+                    <label for="first_name">First Name:</label>
+                    <div class="right-side">
+                        <input type="text" name="first_name" id="input-text" value="{{doctor.first_name}}" placeholder="{{doctor.first_name}}">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <label for="last_name">Last Name:</label>
+                    <div class="right-side">
+                        <input type="text" name="last_name" id="input-text" value="{{doctor.last_name}}" placeholder="{{doctor.last_name}}">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <label for="email">Email:</label>
+                    <div class="right-side">
+                        <input type="text" name="email" id="input-text" value="{{doctor.email}}" placeholder="{{doctor.email}}">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <label for="phone_number">Phone Number:</label>
+                    <div class="right-side">
+                        <input type="text" name="phone_number" id="input-text" value="{{doctor.phone_number}}" placeholder="{{doctor.phone_number}}">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input type="submit" name="Add" class="btn btn-warning">
+                </div>
+            </form>
+        </div>
+
+        
+        
+        <div class="p-5" id="right-side">
+            <h3>Client info?</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Pet name?</li>
+                <li class="list-group-item">Or just giant list in other page</li>
+            </ul>
+        </div>
+    </div>
+    
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="error-msg container p-3">
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
