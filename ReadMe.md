@@ -16,14 +16,14 @@ Appointments:
 Rooms:
 - Add a Edit Room feature to update room name or to delete a room. - normal priority
 - Fix issue with Empty Room display. - low priority
-- - Clarification: A room that has completed an appointment will display differently from a newly created / empty room. Has to do with returning a null/empty value from the SQL database and the checks determining what to display.
+  - Clarification: A room that has completed an appointment will display differently from a newly created / empty room. Has to do with returning a null/empty value from the SQL database and the checks determining what to display.
 Clients:
 - Organize Client Info page on Staff side to better display Clients and their pets. - normal priority
-- - Maybe separate page for all Pets?
-- - Links to owners with list of pets inside?
-- - Or display all Owners and their Pets in sub-table
+  - Maybe separate page for all Pets?
+  - Links to owners with list of pets inside?
+  - Or display all Owners and their Pets in sub-table
 - Give Staff ability to edit Client information. - normal priority
 
 CSS:
 - Add more CSS to the project to make it more visually appealing. - low priority
-- - Project was designed with a basic framework in mind and focus was on making it work. Not much effort was put into making it look nice.
+  - Project was designed with a basic framework in mind and focus was on making it work. Not much effort was put into making it look nice.
