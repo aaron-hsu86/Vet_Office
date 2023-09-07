@@ -1,12 +1,10 @@
 #Vet_Office
 
-Python project completed within a week.
+Python project completed within a week, with the focus on creating an MVP.
 Project uses MySQL to store and track data for Owners, their Pets, Doctors/Staff, Rooms at the office, and Appointments with pets conditions and treatment.
 
-This is an MVP version of the project, and there are plenty of areas for improvement or to add more features.
-At the moment, Rooms can be created, not deleted.
-Client Info page is a massive list of Owners and Pet, not properly organized. It lists ALL information, not properly sorted and displayed.
-All Appointments are listed.
+This is an MVP version of the project, meaning there are plenty of areas for improvement or to add more features.
+If I re-visit this project, the items below are tasks I would plan to tackle.
 
 TO-DO (if re-visiting this project in the future):
 Appointments:
@@ -27,3 +25,6 @@ Clients:
 CSS:
 - Add more CSS to the project to make it more visually appealing. - low priority
   - Project was designed with a basic framework in mind and focus was on making it work. Not much effort was put into making it look nice.
+
+Other:
+- Optimize pages for mobile. -low priority
